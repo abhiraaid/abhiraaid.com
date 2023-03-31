@@ -214,8 +214,6 @@ p{
 .text{
     margin-right: 50px;
     display: inline-block;
-    border-right: 10px solid #ffffff; /* add a border to create a blinking cursor effect */
-    padding-right: 0px; /* add some padding to the right of the text for spacing */
     overflow: hidden; /* hide any overflowed text */
 }
 

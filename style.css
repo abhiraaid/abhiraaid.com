@@ -1,0 +1,696 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;  
+    height: 100vh;
+    
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.userbox{
+    /* background-color: antiquewhite; */
+    width: 90vw;
+    height:35vh;
+}
+
+.socials{
+    /* background-color: yellowgreen; */
+    width:90vw;
+    height: 65vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.details{
+    /* background-color: aqua; */
+    max-height: 100%;
+    min-height: 70%;
+    min-width: 70%;
+    max-width: 100%;
+}
+
+
+.container{
+    /* background-color: aquamarine; */
+    min-width: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 30%;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .userbox,.socials{
+        width: 100vw;
+    }
+  
+    .socials {
+        flex-direction:column;
+        
+    }
+    .details{
+        min-height: 0%;
+    }
+    .container{
+        min-height: 100%;
+    }
+
+  }
+
+@media only screen and (min-width: 1350px) {
+    .userbox,.socials{
+        width: 75vw;
+    }
+}
+/* basic FLEXING  done! */
+
+/* starting  to add imgboxes & svg icons inside the container*/
+.container{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+
+.imgbox{
+    width: 120px;
+    height: 120px;
+    /* background-color: rgb(0, 0, 0); */
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    /* cursor:pointer !important; */
+    cursor: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;/*position absolute is to be given to it's child outline*/
+}
+
+/* Controlling the logo sizes z-index:1 to bring it above outline logos */
+.logo{
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+}
+
+/* patreon svg is a little bigger, so making it smaller! */
+.logo.ptn{ 
+     width: 55px;
+    height: 50px; 
+}
+
+/* I'm thinking of controlling outline svgs individually since there's just 3 of them also more freedom to play around */
+
+.outline.astn{
+    position: absolute;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+}
+.outline.yt{
+    position: absolute;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+}
+.outline.ptn{ 
+    position: absolute;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+}
+
+
+
+
+.outline{
+  position: absolute;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    fill: transparent;
+}
+
+/* The images, container & imgbox were set up now making it mobile friendly */
+@media only screen and (max-width: 700px){
+    .container{
+        justify-content:flex-start;
+        align-items: center;
+    } 
+}
+
+
+/* setting up the details(left side) with detail as flex-items where I will display details about the logo on hover*/
+
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    
+}
+.detail{
+    /* background-color: blue; */
+    overflow: hidden;
+    position: absolute;/* This needs to be absolute, otherwise it messes with js code and create glitches*/
+    width: 100%;
+    height: 120px;
+    /* background-color: rgb(0, 0, 0); */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#astndetail{
+  opacity: 0;
+}
+#ytdetail{
+  opacity: 0;
+    transition: opacity 1s ease-in;
+}
+#ptndetail{
+  opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif; 
+  color: white;
+  font-size: 18px;
+  justify-self: flex-end;
+  line-height: 2em;
+  text-align: right;
+  font-weight: 400 !important;
+}
+
+
+.text{
+    margin-right: 50px;
+    display: inline-block;
+    border-right: 10px solid #ffffff; /* add a border to create a blinking cursor effect */
+    padding-right: 0px; /* add some padding to the right of the text for spacing */
+    animation: typing 1s steps(10, end), blink 0.5s step-end infinite; /* add animation effects */
+    white-space: nowrap; /* prevent the text from wrapping */
+    overflow: hidden; /* hide any overflowed text */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #000 }
+}
+
+
+/* removing the detail flex-items section in mobile view*/
+@media only screen and (max-width: 700px){
+    .detail{
+        width: 0px;
+        height: 0px;
+    }
+     
+}
+
+
+/* we need to make the detail boxes aligned with the logos, for that I'm gonna use margin-top */
+.detail.astndetail{
+  margin-top: 0px;
+}
+.detail.ytdetail{
+  margin-top: 120px;
+}
+.detail.ptndetail{
+  margin-top: 240px;
+}
+
+/* let's setup hover animations for logoastn */
+
+#logoastn:hover{
+  width: 70px;
+  height: 70px;
+}
+#logoastn:hover ~ .outline.astn {
+  width: 70px;
+  height: 70px;
+  stroke: #fff;
+  stroke-width: 15px;
+  animation: path-neon-astn 1s ease-in-out forwards alternate;
+}
+
+@keyframes path-neon-astn {
+  0% {
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 1100;
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #b2e4fd) drop-shadow(0px 0px 1px #9bdeff) drop-shadow(0px 0px 2.5px #73d0ff);
+  }
+  50% {
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 550;
+    filter: drop-shadow(0px 0px .1px #fff) drop-shadow(0px 0px 1px #b2e4fd) drop-shadow(0px 0px 2.5px #9bdeff) drop-shadow(0px 0px 4px #73d0ff);
+  }
+  100% {
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #b2e4fd) drop-shadow(0px 0px 1px #9bdeff) drop-shadow(0px 0px 2.5px #73d0ff);
+  }
+}
+
+/* #logoyt animations*/
+#logoyt:hover{
+  width: 70px;
+  height: 70px;
+}
+#logoyt:hover ~ .outline.yt{
+  width: 70px;
+  height: 70px;
+  stroke: #fff;
+  stroke-width: 20px;
+  animation: path-neon-yt 1s linear forwards;
+}
+
+@keyframes path-neon-yt {
+  0% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
+  }
+  50% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 1000;
+    filter: drop-shadow(0px 0px .1px #fff) drop-shadow(0px 0px 1px #ffeeee) drop-shadow(0px 0px 3px #ffbdbd) drop-shadow(0px 0px 5px #ff9090);
+  }
+  100% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
+  }
+}
+
+/* patreon logo */
+#logoptn:hover{
+  width: 52px;
+  height: 48px;
+}
+
+#logoptn:hover ~ .outline.ptn{
+    width: 52px;
+    height: 48px;
+    fill: transparent;
+    stroke: #ff0000;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    stroke-width: 10px;
+    animation: path-neon-ptn 1s ease-in-out forwards alternate;
+}
+
+
+@keyframes path-neon-ptn 
+{
+  0% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    filter: drop-shadow(0px 0px .5px #fc0a0a) drop-shadow(0px 0px .7px #ff4545) drop-shadow(0px 0px 1px #ff9696) drop-shadow(0px 0px 1px #ffdfdf);
+  }
+  50% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 1000;
+    filter: drop-shadow(0px 0px 1px #fc0a0a) drop-shadow(0px 0px 1.4px #ff4545) drop-shadow(0px 0px 2px #ff9696) drop-shadow(0px 0px 2px #ffdfdf);
+  }
+  100% {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0px 0px .5px #fc0a0a) drop-shadow(0px 0px .7px #ff4545) drop-shadow(0px 0px 1px #ff9696) drop-shadow(0px 0px 1px #ffdfdf);
+  }
+}
+
+
+/* {
+  0% {
+    filter: drop-shadow(0px 0px 2px #ff4343) drop-shadow(0px 0px 1px #ffbdbd) ;
+  }
+  50% {
+    stroke: #0099E5;
+    stroke-width: 20px;
+    filter: drop-shadow(0px 0px .5px #35b1ef) drop-shadow(0px 0px .5px #5dbeee);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 2px #ff4343) drop-shadow(0px 0px 1px #ffbdbd);
+  }
+} */
+
+
+@media only screen and (max-width: 700px), screen and (max-height: 800px){
+  .imgbox{
+    width: 100px;
+    height: 100px;
+  }
+  #logoastn, #logoyt{
+    width: 65px;
+    height: 65px;
+  }
+  #logoptn{
+    width: 50px;
+    height: 45px;
+  }
+  #logoastn:hover{
+    width: 60px;
+    height: 60px;
+  }
+  #logoastn:hover ~ .outline.astn{
+    width: 60px;
+    height: 60px;
+  }
+  #logoyt:hover{
+    width: 60px;
+    height: 60px;
+  }
+  #logoyt:hover ~ .outline.yt{
+    width: 60px;
+    height: 60px;
+  }
+  #logoptn:hover{
+    width: 47px;
+    height: 41px;
+  }
+  #logoptn:hover ~ .outline.ptn{
+    width: 47px;
+    height: 41px;
+  }
+
+}
+
+@media screen and (max-height: 800px){
+  .detail{
+    height: 100px;
+  }
+  #ytdetail{
+    margin-top: 100px;
+  }
+  #ptndetail{
+    margin-top: 200px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .text{
+    margin-right: 30px;
+  }
+}
+
+
+/* cursor setup */
+   body{
+    cursor: none;
+   }
+
+   .cursor {
+     z-index: 999;
+     position: fixed;
+     background: #fff;
+     width: 15px;
+     height: 15px;
+     border-radius: 50%;
+     pointer-events: none;
+     box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
+     animation: colors 1s infinite;
+     transform: translate(-50%, -50%);
+   }
+   
+   @keyframes colors {
+     0% {
+       box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
+     }
+     50% {
+       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 60px rgba(255, 255, 255, 0.1), 0 0 100px rgba(255, 255, 255, 0.1);
+     }
+     100% {
+       box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
+     }
+   }
+   
+   .cursor:before {
+     content: "";
+     position: absolute;
+     background: transparent;
+     width: 50px;
+     height: 50px;
+     opacity: 0.2;
+     transform: translate(-30%, -30%);
+     border-radius: 50%;
+   }
+
+ 
+  /* end of cursor setup */
+
+
+   /*setting up top section*/
+   
+   #photo{
+      border-radius:50%;
+      width:150px;
+      height:150px;
+   }
+
+   .userbox{
+    display: flex;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+   }
+
+   .photobox{
+    /* background-color: #73d0ff; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-left: 20%;
+   }
+
+   .namebox{
+    /* background-color: #1b1b1b; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+
+   }
+
+   #name{
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+    font-size: 45px;
+    justify-self: flex-end;
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: 700 !important;
+  }
+   
+   #designation{
+    font-family: 'Montserrat', sans-serif; 
+    color: #f2f2f2;
+    font-size: 23px;
+    justify-self: flex-end;
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 500 !important;
+   }
+
+   @media only screen and (max-width: 700px){
+    .userbox{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+    }
+    .body{
+      height: 115vh;
+    }
+    .page{
+      height: 115vh;
+      position: relative;
+    }
+    #gitbox {
+      position: absolute;
+      bottom: 0;
+    }
+    .socials{
+      height: 65vh;
+    }
+    .photobox{
+      margin-left: 0%;
+    }
+    #name{
+      font-size: 34px;
+    }
+    #designation{
+      font-size: 18px;
+    }
+   }
+
+   /* animating photobox */
+
+   .photobox {
+    opacity: 0; /* start with 0 opacity */
+    animation: fadeIn .5s ease-in-out forwards;
+    animation-delay: .5s; /* add a delay of 1.5 seconds */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+
+
+  
+  #designation {
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeinDes 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeinDes {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+
+  .namebox {
+    animation: slideIn 1s ease forwards;
+    transform: translateX(-100%);
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @media only screen and (max-width: 700px){
+    .namebox{
+      transform: translateX(0);
+      transform: translateY(-100%)
+    }
+    @keyframes slideIn{
+      to{
+        transform: translateY(0)
+      }
+    }
+  }
+
+  #gitbox {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    /* background-color: #000000; */
+    padding: 10px;
+    z-index: 5;
+  }
+
+  #github {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500 !important;
+    color: #f2f2f2;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    animation: github 1s ease-in forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes github {
+    to{
+      opacity:1;
+    }
+    
+  }
+
+  #github:hover {
+    color: white;
+    font-size: 12.5px;
+    text-shadow: 0px 0px 1px white;
+  }
+
+  /* making #github mobile friendly*/
+  @media only screen and (max-width: 700px),screen and (max-height: 800px)
+  {
+    #github{
+      font-size: 9px;
+    }
+    #gitbox{
+      padding: 10px;
+      bottom:25px
+    }
+    #github:hover{
+      font-size: 9.5px;
+    }
+    #name{
+      font-size: 34px;
+    }
+    #designation{
+      font-size: 18px;
+    }
+    #photo{
+      height: 120px;
+      width: 120px;
+    }
+  }
+  
+
+  /* aniamting logo while the page loads */
+  .logo{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    animation: logoanim 1s ease-in forwards;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes logoanim {
+    to{
+      opacity:1;
+    }
+    
+  }
+  

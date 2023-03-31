@@ -100,7 +100,7 @@ body{
 
 a{
     /* cursor:pointer !important; */
-    cursor: none;
+    cursor: none; /*you can change it to pointer if you want*/
     display: flex;
     align-items: center;
     justify-content: center;

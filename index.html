@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap" rel="stylesheet">
+    <title>abhiraaid</title>
+    
+    <style>
+
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const logoastn = document.getElementById("logoastn");
+            const astndetail = document.getElementById("astndetail");
+
+            logoastn.addEventListener("mouseenter", () => {
+            astndetail.style.opacity = 1;
+            astndetail.style.transitionProperty ="opacity";
+            astndetail.style.transitionDuration ="1s";
+            astndetail.style.transitionTimingFunction ="ease-in";
+            astndetail.style.transitionDelay = "1s";
+            });
+
+            logoastn.addEventListener("mouseleave", () => {
+            astndetail.style.opacity = 0;
+            astndetail.style.transitionProperty ="none";
+            astndetail.style.transitionDuration ="0s";
+            astndetail.style.transitionTimingFunction ="none";
+            astndetail.style.transitionDelay = "0s";
+            });
+
+
+            const logoyt = document.getElementById("logoyt");
+            const ytdetail = document.getElementById("ytdetail");
+
+            logoyt.addEventListener("mouseenter", () => {
+            ytdetail.style.opacity = 1;
+            ytdetail.style.transitionProperty ="opacity";
+            ytdetail.style.transitionDuration ="1s";
+            ytdetail.style.transitionTimingFunction ="ease-in";
+            ytdetail.style.transitionDelay = "1s";
+            });
+
+            logoyt.addEventListener("mouseleave", () => {
+            ytdetail.style.opacity = 0;
+            ytdetail.style.transitionProperty ="none";
+            ytdetail.style.transitionDuration ="0s";
+            ytdetail.style.transitionTimingFunction ="none";
+            ytdetail.style.transitionDelay = "0s";
+            });
+
+
+            const logoptn = document.getElementById("logoptn");
+            const ptndetail = document.getElementById("ptndetail");
+
+            logoptn.addEventListener("mouseenter", () => {
+            ptndetail.style.opacity = 1;
+            ptndetail.style.transitionProperty ="opacity";
+            ptndetail.style.transitionDuration ="1s";
+            ptndetail.style.transitionTimingFunction ="ease-in";
+            ptndetail.style.transitionDelay = "1s";
+            });
+
+            logoptn.addEventListener("mouseleave", () => {
+            ptndetail.style.opacity = 0;
+            ptndetail.style.transitionProperty ="none";
+            ptndetail.style.transitionDuration ="0s";
+            ptndetail.style.transitionTimingFunction ="none";
+            ptndetail.style.transitionDelay = "0s";
+            });
+    });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="page"> 
+
+        <div id="gitbox"><a id="github" href="https://www.github.com/abhiraaid" target="_blank">VIEW SOURCE ON GITHUB</a></div>
+
+        <div class="userbox">
+            <div class="photobox">
+                <img id="photo"  src="abhiraaid.jpg" alt="abhiraaid">
+            </div>
+            <div class="namebox">
+                <h1 id="name">abhiraaid</h1>
+                <h3 id="designation">Environment Artist</h3>
+            </div>      
+        </div>
+
+        <div class="socials">
+            <!-- this is the details flex container -->
+            <div class="details">
+                <div id="astndetail" class="detail astndetail">
+                    <p id="astntext" class="text">
+                        You can find my artworks and<br>upcoming courses on Artstation
+                    </p>
+                </div>
+                <div id="ytdetail" class="detail ytdetail">
+                    <p id="yttext" class="text">
+                        I deeply care about Environments<br>Let's create something empowering!
+                    </p>
+                </div>
+                <div id="ptndetail" class="detail ptndetail">
+                    <p id="ptntext" class="text">
+                        You can support me on Patreon!
+                    </p>
+                </div>
+            </div>
+            <!-- the following is the image/logo container -->
+            <div class="container">
+                <div class="imgbox artstation" >
+                    <!--you change links on all the <a>  -->
+                    <a href="https://www.artstation.com/abhiraaid/" target="_blank">
+                        <!-- within the <a>, the first child needs to be the main logo, this affects the hover animations we are adding to the outline svg -->
+                        <svg href="https://www.artstation.com" id="logoastn" class="logo astn" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_7-artstation"><g><path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z" style="fill:#0099E5;"/></g></g><g id="Layer_1"/></svg>                    
+                        <svg id="outlineastn" class="outline astn" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_7-artstation"><g><path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z" /*style="fill:none;fill-opacity:1;stroke:#0099E5;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"*//>/></g><g id="Layer_1"/></svg>
+                    </a>
+                </div>
+                <div class="imgbox youtube">
+                    <a href="https://www.youtube.com/@abhiraaid/videos/" target="_blank">  
+                        <svg id="logoyt" class="logo yt" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_95-youtube"><g><path d="M476.387,144.888c-5.291-19.919-20.878-35.608-40.67-40.933C399.845,94.282,256,94.282,256,94.282    s-143.845,0-179.719,9.674c-19.791,5.325-35.378,21.013-40.668,40.933c-9.612,36.105-9.612,111.438-9.612,111.438    s0,75.334,9.612,111.438c5.29,19.92,20.877,34.955,40.668,40.281C112.155,417.719,256,417.719,256,417.719    s143.845,0,179.717-9.674c19.792-5.326,35.379-20.361,40.67-40.281c9.612-36.104,9.612-111.438,9.612-111.438    S485.999,180.994,476.387,144.888z" style="fill:#FF0000;"/><polygon points="208.954,324.723 208.954,187.93 329.18,256.328   " style="fill:#FFFFFF;"/></g></g><g id="Layer_1"/></svg>
+                        <svg id="outlineyt" class="outline yt" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_95-youtube"><g><path d="M476.387,144.888c-5.291-19.919-20.878-35.608-40.67-40.933C399.845,94.282,256,94.282,256,94.282    s-143.845,0-179.719,9.674c-19.791,5.325-35.378,21.013-40.668,40.933c-9.612,36.105-9.612,111.438-9.612,111.438    s0,75.334,9.612,111.438c5.29,19.92,20.877,34.955,40.668,40.281C112.155,417.719,256,417.719,256,417.719    s143.845,0,179.717-9.674c19.792-5.326,35.379-20.361,40.67-40.281c9.612-36.104,9.612-111.438,9.612-111.438    S485.999,180.994,476.387,144.888z" /*style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"*//></g></g><g id="Layer_1"/></svg>
+                    </a>
+                </div>
+                <div class="imgbox patreon">
+                    <a href="https://www.patreon.com/abhiraaid/" target="_blank">  
+                        <svg id="logoptn" class="logo ptn" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" fill="#ffffff" class="fill-000000"/></svg>
+                        <svg id="outlineptn" class="outline ptn" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" /*style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1*/"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+
+    <!-- following script is for the cursor animation -->
+    <script type="text/javascript">
+        const cursor = document.querySelector('.cursor');
+        var timeout;
+
+        //follow cursor on mousemove
+        document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.display = "block";
+
+        //cursor effects when mouse stopped
+        function mouseStopped(){
+            cursor.style.display = "none";
+        }
+        clearTimeout(timeout);
+        timeout = setTimeout(mouseStopped, 500);//mouse will be invisible after 500ms of inactivity
+        });
+
+        //cursor effects when mouseout
+        document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+        });
+        
+        const links = document.querySelectorAll('a');
+        console.log(links);
+
+        links.forEach(link => {
+        const elements = link.querySelectorAll('*');
+        elements.forEach(element => {
+            element.addEventListener('mouseover', () => {
+            cursor.style.display = "none";
+        });
+            element.addEventListener('mouseout', () => {
+            cursor.style.display = "block";
+            });
+        });
+        });
+    
+    </script>
+
+</body>
+
+</html>

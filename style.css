@@ -84,9 +84,61 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    
 }
+   #photo{
+      border-radius:50%;
+      width:150px;
+      height:150px;
+   }
 
+   .userbox{
+    display: flex;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+   }
+
+   .photobox{
+    /* background-color: #73d0ff; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-left: 20%;
+   }
+
+   .namebox{
+    /* background-color: #1b1b1b; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+
+   }
+
+   #name{
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+    font-size: 45px;
+    justify-self: flex-end;
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: 700 !important;
+  }
+   
+   #designation{
+    font-family: 'Montserrat', sans-serif; 
+    color: #f2f2f2;
+    font-size: 23px;
+    justify-self: flex-end;
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 500 !important;
+   }
 .imgbox{
     width: 120px;
     height: 120px;
@@ -459,62 +511,8 @@ p{
   /* end of cursor setup */
 
 
-   /*setting up top section*/
+   /*setting up top section to be mobile friendly*/
    
-   #photo{
-      border-radius:50%;
-      width:150px;
-      height:150px;
-   }
-
-   .userbox{
-    display: flex;
-    border-radius: 20px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-   }
-
-   .photobox{
-    /* background-color: #73d0ff; */
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
-    margin-left: 20%;
-   }
-
-   .namebox{
-    /* background-color: #1b1b1b; */
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px 10px;
-
-   }
-
-   #name{
-    font-family: 'Montserrat', sans-serif; 
-    color: white;
-    font-size: 45px;
-    justify-self: flex-end;
-    line-height: 1.4em;
-    text-align: center;
-    font-weight: 700 !important;
-  }
-   
-   #designation{
-    font-family: 'Montserrat', sans-serif; 
-    color: #f2f2f2;
-    font-size: 23px;
-    justify-self: flex-end;
-    line-height: 1.2em;
-    text-align: center;
-    font-weight: 500 !important;
-   }
 
    @media only screen and (max-width: 700px){
     .userbox{

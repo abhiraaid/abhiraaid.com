@@ -216,19 +216,7 @@ p{
     display: inline-block;
     border-right: 10px solid #ffffff; /* add a border to create a blinking cursor effect */
     padding-right: 0px; /* add some padding to the right of the text for spacing */
-    animation: typing 1s steps(10, end), blink 0.5s step-end infinite; /* add animation effects */
-    white-space: nowrap; /* prevent the text from wrapping */
     overflow: hidden; /* hide any overflowed text */
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: #000 }
 }
 
 

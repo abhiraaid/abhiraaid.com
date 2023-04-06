@@ -391,8 +391,20 @@ p{
   }
 }
 
+/*Just making the animation faster on mobile view*/
+@media only screen and (max-width: 700px){
+  #logoastn:hover ~ .outline.astn{
+    animation: path-neon-astn .4s ease-in-out forwards;
+  }
+  #logoyt:hover ~ .outline.yt{
+    animation: path-neon-yt .4s ease-in-out forwards;
+  }
+  #logoptn:hover ~ .outline.ptn{
+    animation: path-neon-ptn .4s ease-in-out forwards;
+  }
+}
 
-
+/*changing icon sizes for mobile and 720p monitors*/
 @media only screen and (max-width: 700px), screen and (max-height: 800px){
   .imgbox{
     width: 100px;

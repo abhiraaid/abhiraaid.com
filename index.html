@@ -13,24 +13,39 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-
+            const cursorid = document.getElementById("cursor");
             const logoastn = document.getElementById("logoastn");
             const astndetail = document.getElementById("astndetail");
 
             logoastn.addEventListener("mouseenter", () => {
             astndetail.style.opacity = 1;
-            astndetail.style.transitionProperty ="opacity";
-            astndetail.style.transitionDuration ="1s";
-            astndetail.style.transitionTimingFunction ="ease-in";
+            astndetail.style.transitionProperty = "opacity";
+            astndetail.style.transitionDuration = "1s";
+            astndetail.style.transitionTimingFunction = "ease-in";
             astndetail.style.transitionDelay = "1s";
+            cursorid.style.width=0;
+            cursorid.style.height=0;
             });
-
+            
             logoastn.addEventListener("mouseleave", () => {
             astndetail.style.opacity = 0;
             astndetail.style.transitionProperty ="none";
             astndetail.style.transitionDuration ="0s";
             astndetail.style.transitionTimingFunction ="none";
             astndetail.style.transitionDelay = "0s";
+            cursorid.style.width="15px";
+            cursorid.style.height="15px";
+            });
+
+
+            const github = document.getElementById("github");
+            github.addEventListener("mouseenter", () =>{
+                cursorid.style.width=0;
+                cursorid.style.height=0;
+            });
+            github.addEventListener("mouseleave", () =>{
+                cursorid.style.width="15px";
+                cursorid.style.height="15px";
             });
 
 
@@ -43,6 +58,8 @@
             ytdetail.style.transitionDuration ="1s";
             ytdetail.style.transitionTimingFunction ="ease-in";
             ytdetail.style.transitionDelay = "1s";
+            cursorid.style.width=0;
+            cursorid.style.height=0;
             });
 
             logoyt.addEventListener("mouseleave", () => {
@@ -51,6 +68,8 @@
             ytdetail.style.transitionDuration ="0s";
             ytdetail.style.transitionTimingFunction ="none";
             ytdetail.style.transitionDelay = "0s";
+            cursorid.style.width="15px";
+            cursorid.style.height="15px";
             });
 
 
@@ -63,6 +82,8 @@
             ptndetail.style.transitionDuration ="1s";
             ptndetail.style.transitionTimingFunction ="ease-in";
             ptndetail.style.transitionDelay = "1s";
+            cursorid.style.width=0;
+            cursorid.style.height=0;
             });
 
             logoptn.addEventListener("mouseleave", () => {
@@ -71,7 +92,10 @@
             ptndetail.style.transitionDuration ="0s";
             ptndetail.style.transitionTimingFunction ="none";
             ptndetail.style.transitionDelay = "0s";
+            cursorid.style.width="15px";
+            cursorid.style.height="15px";
             });
+            
     });
 
     </script>
@@ -110,7 +134,7 @@
                 </div>
                 <div id="ptndetail" class="detail ptndetail">
                     <p id="ptntext" class="text">
-                        You can support me on Patreon!
+                        I write on Patreon :D
                     </p>
                 </div>
             </div>
@@ -141,7 +165,7 @@
         </div>
     </div>
 
-    <div class="cursor"></div>
+    <div id="cursor" class="cursor"></div>
 
     <!-- following script is for the cursor animation -->
     <script type="text/javascript">
@@ -162,7 +186,7 @@
             cursor.style.display = "none";
         }
         clearTimeout(timeout);
-        timeout = setTimeout(mouseStopped, 200);//mouse will be invisible after 500ms of inactivity
+        timeout = setTimeout(mouseStopped, 1000);//mouse will be invisible after 500ms of inactivity
         });
 
         //cursor effects when mouseout

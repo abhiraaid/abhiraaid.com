@@ -1,9 +1,11 @@
-# abhiraaid.com
+# Some Features and INFO
 You can reuse the code snippets or the entire website. The code is well commented. The css code is in the order I built it, so it may be a little messy, but it'll help you understand the flow of the styling.
 
 This is not a portfolio website!
 
 Here are some of it's features
+
+There are 2 variations in icon sizing(usual icon for desktops with 1080p+ screen & smaller icon for mobile&720p screen) , 3 variations in width( 2 with variations for desktop version & the mobile layout)
 
 The focus was more on User Experience and Interaction and Uniformity. The icon hover animates once, and with a delay, the text displays (using a fade in transition, it's also modified using js, it displays transition on launch, but no transition on mouseout[better when users want to move on to next])
 

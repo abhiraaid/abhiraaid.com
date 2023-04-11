@@ -493,6 +493,15 @@ p{
      border-radius: 50%;
    }
 
+   @media only screen and (max-width: 700px){
+    body{
+      cursor: default;
+    }
+    #cursor{
+      width:0px;
+      height:0px ;
+    }
+   }
  
   /* end of cursor setup */
 
@@ -514,7 +523,7 @@ p{
       height: 115vh;
       position: relative;
     }
-    #gitbox {
+    #telbox {
       position: absolute;
       bottom: 0;
     }
@@ -588,7 +597,7 @@ p{
     }
   }
 
-  #gitbox {
+  #telbox {
     position: absolute;
     bottom: 10px;
     width: 100%;
@@ -598,7 +607,7 @@ p{
     z-index: 5;
   }
 
-  #github {
+  #telegram {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 500 !important;
@@ -606,34 +615,34 @@ p{
     text-decoration: none;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    animation: github 1s ease-in forwards;
+    animation: telegram 1s ease-in forwards;
     animation-delay: 2s;
   }
 
-  @keyframes github {
+  @keyframes telegram {
     to{
       opacity:1;
     }
     
   }
 
-  #github:hover {
+  #telegram:hover {
     color: white;
     font-size: 12.5px;
     text-shadow: 0px 0px 1px white;
   }
 
-  /* making #github mobile friendly*/
+  /* making #telegram mobile friendly*/
   @media only screen and (max-width: 700px),screen and (max-height: 800px)
   {
-    #github{
+    #telegram{
       font-size: 9px;
     }
-    #gitbox{
+    #telbox{
       padding: 10px;
       bottom:25px
     }
-    #github:hover{
+    #telegram:hover{
       font-size: 9.5px;
     }
     #name{

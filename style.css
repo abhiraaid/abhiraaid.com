@@ -167,9 +167,9 @@ a{
 }
 
 /* patreon svg is a little bigger, so making it smaller! */
-.logo.ptn{ 
-     width: 55px;
-    height: 50px; 
+.logo.gumr{ 
+     width: 65px;
+    height: 65px; 
 }
 
 /* I'm thinking of controlling outline svgs individually since there's just 3 of them also more freedom to play around */
@@ -186,15 +186,13 @@ a{
     width: 0px;
     height: 0px;
 }
-.outline.ptn{ 
-    position: absolute;
-    z-index: 0;
-    width: 0px;
-    height: 0px;
+
+.outline.gumr{ 
+  position: absolute;
+  z-index: 0;
+  width: 0px;
+  height: 0px;
 }
-
-
-
 
 .outline{
   position: absolute;
@@ -203,6 +201,7 @@ a{
     height: 0px;
     fill: transparent;
 }
+
 
 /* The images, container & imgbox were set up now making it mobile friendly */
 @media only screen and (max-width: 700px){
@@ -245,11 +244,9 @@ a{
 }
 #ytdetail{
   opacity: 0;
-    transition: opacity 1s ease-in;
 }
-#ptndetail{
+#gumrdetail{
   opacity: 0;
-    transition: opacity 1s ease-in;
 }
 
 p{
@@ -287,7 +284,7 @@ p{
 .detail.ytdetail{
   margin-top: 120px;
 }
-.detail.ptndetail{
+.detail.gumrdetail{
   margin-top: 240px;
 }
 
@@ -355,39 +352,39 @@ p{
 }
 
 /* patreon logo */
-#logoptn:hover{
-  width: 52px;
-  height: 48px;
+#logogumr:hover{
+  width: 60px;
+  height: 60px;
 }
 
-#logoptn:hover ~ .outline.ptn{
-    width: 52px;
-    height: 48px;
+#logogumr:hover ~ .outline.gumr{
+    width: 72px;
+    height: 72px;
     fill: transparent;
-    stroke: #ff0000;
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    stroke-width: 10px;
-    animation: path-neon-ptn 1s ease-in-out forwards alternate;
+    stroke: #fff;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    stroke-width: 1px;
+    animation: path-neon-gumr 1s ease-in-out forwards alternate;
 }
 
 
-@keyframes path-neon-ptn 
+@keyframes path-neon-gumr 
 {
   0% {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    filter: drop-shadow(0px 0px .5px #fc0a0a) drop-shadow(0px 0px .7px #ff4545) drop-shadow(0px 0px 1px #ff9696) drop-shadow(0px 0px 1px #ffdfdf);
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
   }
   50% {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 1000;
-    filter: drop-shadow(0px 0px 1px #fc0a0a) drop-shadow(0px 0px 1.4px #ff4545) drop-shadow(0px 0px 2px #ff9696) drop-shadow(0px 0px 2px #ffdfdf);
+    stroke-dasharray: 120;
+    stroke-dashoffset: 60;
+    filter: drop-shadow(0px 0px .1px #fff) drop-shadow(0px 0px 1px #ffeeee) drop-shadow(0px 0px 3px #ffbdbd) drop-shadow(0px 0px 5px #ff9090);
   }
   100% {
-    stroke-dasharray: 2000;
+    stroke-dasharray: 120;
     stroke-dashoffset: 0;
-    filter: drop-shadow(0px 0px .5px #fc0a0a) drop-shadow(0px 0px .7px #ff4545) drop-shadow(0px 0px 1px #ff9696) drop-shadow(0px 0px 1px #ffdfdf);
+    filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
   }
 }
 
@@ -402,9 +399,9 @@ p{
     width: 65px;
     height: 65px;
   }
-  #logoptn{
-    width: 50px;
-    height: 45px;
+  #logogumr{
+    width: 55px;
+    height: 55px;
   }
   #logoastn:hover{
     width: 60px;
@@ -422,13 +419,13 @@ p{
     width: 60px;
     height: 60px;
   }
-  #logoptn:hover{
-    width: 47px;
-    height: 41px;
+  #logogumr:hover{
+    width: 50px;
+    height: 50px;
   }
-  #logoptn:hover ~ .outline.ptn{
-    width: 47px;
-    height: 41px;
+  #logogumr:hover ~ .outline.gumr{
+    width: 60px;
+    height: 60px;
   }
 
 }
@@ -440,7 +437,7 @@ p{
   #ytdetail{
     margin-top: 100px;
   }
-  #ptndetail{
+  #gumrdetail{
     margin-top: 200px;
   }
   p{

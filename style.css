@@ -152,7 +152,7 @@ body{
 
 a{
     /* cursor:pointer !important; */
-    cursor: none; /*you can change it to pointer if you want*/
+    cursor: pointer; /*you can change it to pointer if you want*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -447,60 +447,6 @@ p{
     margin-right: 30px;
   }
 }
-
-
-/* cursor setup */
-   body{
-    cursor: none;
-   }
-
-   .cursor {
-     z-index: 999;
-     position: fixed;
-     background: #fff;
-     width: 15px;
-     height: 15px;
-     border-radius: 50%;
-     pointer-events: none;
-     box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
-     animation: colors .5s infinite;
-     transform: translate(-50%, -50%);
-   }
-   
-   @keyframes colors {
-     0% {
-       box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
-     }
-     50% {
-       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 60px rgba(255, 255, 255, 0.1), 0 0 100px rgba(255, 255, 255, 0.1);
-     }
-     100% {
-       box-shadow: 0 0 20px #fff, 0 0 60px #fff, 0 0 100px #fff;
-     }
-   }
-   
-   .cursor:before {
-     content: "";
-     position: absolute;
-     background: transparent;
-     width: 50px;
-     height: 50px;
-     opacity: 0.2;
-     transform: translate(-30%, -30%);
-     border-radius: 50%;
-   }
-
-   @media only screen and (max-width: 700px){
-    body{
-      cursor: default;
-    }
-    #cursor{
-      width:0px;
-      height:0px ;
-    }
-   }
- 
-  /* end of cursor setup */
 
 
    /*setting up top section to be mobile friendly*/

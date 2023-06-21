@@ -351,29 +351,27 @@ p{
   }
 }
 
-/* patreon logo */
-#logogumr:hover{
+/*Gumroad*/
+#logogumr:hover {
   width: 60px;
   height: 60px;
 }
 
-#logogumr:hover ~ .outline.gumr{
-    width: 72px;
-    height: 72px;
-    fill: transparent;
-    stroke: #fff;
-    stroke-dasharray: 120;
-    stroke-dashoffset: 120;
-    stroke-width: 1px;
-    animation: path-neon-gumr 1s ease-in-out forwards alternate;
+#logogumr:hover ~ .outline.gumr {
+  width: 72px;
+  height: 72px;
+  fill: transparent;
+  stroke: #fff;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 0;
+  stroke-width: 1px;
+  animation: path-neon-gumr 1s ease-in-out forwards alternate;
 }
 
-
-@keyframes path-neon-gumr 
-{
+@keyframes path-neon-gumr {
   0% {
     stroke-dasharray: 120;
-    stroke-dashoffset: 120;
+    stroke-dashoffset: 0;
     filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
   }
   50% {
@@ -383,7 +381,7 @@ p{
   }
   100% {
     stroke-dasharray: 120;
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 120;
     filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
   }
 }

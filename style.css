@@ -363,7 +363,7 @@ p{
   fill: transparent;
   stroke: #fff;
   stroke-width: 1px;
-  animation: path-neon-gumr 1s ease-in-out reverse;
+  animation: path-neon-gumr 1s ease-in-out reverse alternate;
 }
 
 @keyframes path-neon-gumr {

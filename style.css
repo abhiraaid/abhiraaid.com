@@ -362,10 +362,8 @@ p{
   height: 72px;
   fill: transparent;
   stroke: #fff;
-  stroke-dasharray: 120;
-  stroke-dashoffset: 120;
   stroke-width: 1px;
-  animation: path-neon-gumr 1s ease-in-out forwards alternate;
+  animation: path-neon-gumr 1s ease-in-out reverse;
 }
 
 @keyframes path-neon-gumr {
@@ -376,7 +374,7 @@ p{
   }
   50% {
     stroke-dasharray: 120;
-    stroke-dashoffset: -60;
+    stroke-dashoffset: 60;
     filter: drop-shadow(0px 0px .1px #fff) drop-shadow(0px 0px 1px #ffeeee) drop-shadow(0px 0px 3px #ffbdbd) drop-shadow(0px 0px 5px #ff9090);
   }
   100% {

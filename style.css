@@ -1,13 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box ;
 }
 
 body{
     background-color: black;  
     height: 100vh;
-    
+    overflow: hidden;
 }
 
 .page{
@@ -52,6 +52,10 @@ body{
 
 
 @media only screen and (max-width: 700px) {
+
+    body{
+      overflow: scroll;
+    }
 
     .userbox,.socials{
         width: 100vw;
@@ -122,7 +126,7 @@ body{
 
    #name{
     font-family: 'Montserrat', sans-serif; 
-    color: white;
+    color: #F5F5F5;
     font-size: 45px;
     justify-self: flex-end;
     line-height: 1.4em;
@@ -132,7 +136,7 @@ body{
    
    #designation{
     font-family: 'Montserrat', sans-serif; 
-    color: #f2f2f2;
+    color: #F5F5F5;
     font-size: 23px;
     justify-self: flex-end;
     line-height: 1.2em;
@@ -166,7 +170,7 @@ a{
     height: 75px;
 }
 
-/* patreon svg is a little bigger, so making it smaller! */
+/* Gumroad svg is a little bigger, so making it smaller! */
 .logo.gumr{ 
      width: 65px;
     height: 65px; 
@@ -174,7 +178,7 @@ a{
 
 /* I'm thinking of controlling outline svgs individually since there's just 3 of them also more freedom to play around */
 
-.outline.astn{
+.outline.discord{
     position: absolute;
     z-index: 0;
     width: 0px;
@@ -239,7 +243,7 @@ a{
     align-items: center;
     justify-content: flex-end;
 }
-#astndetail{
+#discorddetail{
   opacity: 0;
 }
 #ytdetail{
@@ -257,6 +261,7 @@ p{
   line-height: 2em;
   text-align: right;
   font-weight: 400 !important;
+  user-select: none;
 }
 
 
@@ -278,7 +283,7 @@ p{
 
 
 /* we need to make the detail boxes aligned with the logos, for that I'm gonna use margin-top */
-.detail.astndetail{
+.detail.discorddetail{
   margin-top: 0px;
 }
 .detail.ytdetail{
@@ -288,21 +293,26 @@ p{
   margin-top: 240px;
 }
 
-/* let's setup hover animations for logoastn */
+/* let's setup hover animations for logodiscord */
 
-#logoastn:hover{
+#logodiscord:hover{
   width: 70px;
   height: 70px;
 }
-#logoastn:hover ~ .outline.astn {
+#logodiscord:hover ~ .outline.discord {
   width: 70px;
   height: 70px;
   stroke: #fff;
   stroke-width: 15px;
-  animation: path-neon-astn 1s ease-in-out forwards alternate;
+  animation: path-neon-discord 1s ease-in-out forwards alternate;
 }
 
-@keyframes path-neon-astn {
+#logodiscord:hover path{
+  fill: #5865F2;
+  transition: fill 1s ease;
+}
+
+@keyframes path-neon-discord {
   0% {
     stroke-dasharray: 1100;
     stroke-dashoffset: 1100;
@@ -325,12 +335,23 @@ p{
   width: 70px;
   height: 70px;
 }
+
+#logoyt:hover path{
+  fill: #FF0000;
+  transition: fill 1s ease;
+}
+
+#logoyt:hover polygon{
+  fill: #FFF;
+  transition: fill 1s ease;
+}
+
 #logoyt:hover ~ .outline.yt{
   width: 70px;
   height: 70px;
   stroke: #fff;
   stroke-width: 20px;
-  animation: path-neon-yt 1s linear forwards;
+  animation: path-neon-yt 1s ease-in-out forwards;
 }
 
 @keyframes path-neon-yt {
@@ -366,17 +387,21 @@ p{
     animation: path-neon-gumr 1s ease-in-out forwards;
 }
 
+#logogumr:hover path{
+  fill: #FF90E8;
+  transition: fill 1s ease;
+}
 
 @keyframes path-neon-gumr 
 {
   0% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
     filter: drop-shadow(0px 0px .05px #fff) drop-shadow(0px 0px .5px #ffeeee) drop-shadow(0px 0px 1px #ffbdbd) drop-shadow(0px 0px 3px #ff9090);
   }
   50% {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 130;
+    stroke-dasharray: 80;
+    stroke-dashoffset: 140;
     filter: drop-shadow(0px 0px .1px #fff) drop-shadow(0px 0px 1px #ffeeee) drop-shadow(0px 0px 3px #ffbdbd) drop-shadow(0px 0px 5px #ff9090);
   }
   100% {
@@ -393,7 +418,7 @@ p{
     width: 100px;
     height: 100px;
   }
-  #logoastn, #logoyt{
+  #logodiscord, #logoyt{
     width: 65px;
     height: 65px;
   }
@@ -401,11 +426,11 @@ p{
     width: 55px;
     height: 55px;
   }
-  #logoastn:hover{
+  #logodiscord:hover{
     width: 60px;
     height: 60px;
   }
-  #logoastn:hover ~ .outline.astn{
+  #logodiscord:hover ~ .outline.discord{
     width: 60px;
     height: 60px;
   }

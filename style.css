@@ -51,7 +51,8 @@ body{
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) 
+  {
 
     body{
       overflow: scroll;
@@ -72,7 +73,11 @@ body{
         min-height: 100%;
     }
 
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
   }
+  
 
 @media only screen and (min-width: 1350px) {
     .userbox,.socials{
@@ -160,6 +165,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
     position: relative;/*position absolute is to be given to it's child outline*/
 }
 

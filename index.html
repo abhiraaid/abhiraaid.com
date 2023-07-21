@@ -14,8 +14,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cursorid = document.getElementById("cursor");
-            const logoastn = document.getElementById("logoastn");
-            const astndetail = document.getElementById("astndetail");
+            const logodiscord = document.getElementById("logodiscord");
+            const discorddetail = document.getElementById("discorddetail");
             let isHovered = false;
 
             function setCursorSize() {
@@ -28,24 +28,24 @@
             }
             }
 
-            logoastn.addEventListener("mouseenter", () => {
+            logodiscord.addEventListener("mouseenter", () => {
             isHovered = true;
-            astndetail.style.opacity = 1;
-            astndetail.style.transitionProperty = "opacity";
-            astndetail.style.transitionDuration = "1s";
-            astndetail.style.transitionTimingFunction = "ease-in";
-            astndetail.style.transitionDelay = "1s";
+            discorddetail.style.opacity = 1;
+            discorddetail.style.transitionProperty = "opacity";
+            discorddetail.style.transitionDuration = "1s";
+            discorddetail.style.transitionTimingFunction = "ease-in";
+            discorddetail.style.transitionDelay = "1s";
             cursorid.style.width=0;
             cursorid.style.height=0;
             });
 
-            logoastn.addEventListener("mouseleave", () => {
+            logodiscord.addEventListener("mouseleave", () => {
             isHovered = false;
-            astndetail.style.opacity = 0;
-            astndetail.style.transitionProperty ="none";
-            astndetail.style.transitionDuration ="0s";
-            astndetail.style.transitionTimingFunction ="none";
-            astndetail.style.transitionDelay = "0s";
+            discorddetail.style.opacity = 0;
+            discorddetail.style.transitionProperty ="none";
+            discorddetail.style.transitionDuration ="0s";
+            discorddetail.style.transitionTimingFunction ="none";
+            discorddetail.style.transitionDelay = "0s";
             setCursorSize(); // Set cursor size based on screen size
             });
 
@@ -131,7 +131,7 @@
 
         <div id="telbox">
         <a id="telegram" href="https://twitter.com/abhiraaid" target="_blank">
-        <svg enable-background="new 0 0 32 32" height="20px" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#55ACEE"/><g/><g/><g/><g/><g/><g/></svg>
+        <svg enable-background="new 0 0 32 32" height="20px" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M31.993,6.077C30.816,6.6,29.552,6.953,28.223,7.11c1.355-0.812,2.396-2.098,2.887-3.63  c-1.269,0.751-2.673,1.299-4.168,1.592C25.744,3.797,24.038,3,22.149,3c-3.625,0-6.562,2.938-6.562,6.563  c0,0.514,0.057,1.016,0.169,1.496C10.301,10.785,5.465,8.172,2.227,4.201c-0.564,0.97-0.888,2.097-0.888,3.3  c0,2.278,1.159,4.286,2.919,5.464c-1.075-0.035-2.087-0.329-2.972-0.821c-0.001,0.027-0.001,0.056-0.001,0.082  c0,3.181,2.262,5.834,5.265,6.437c-0.55,0.149-1.13,0.23-1.729,0.23c-0.424,0-0.834-0.041-1.234-0.117  c0.834,2.606,3.259,4.504,6.13,4.558c-2.245,1.76-5.075,2.811-8.15,2.811c-0.53,0-1.053-0.031-1.566-0.092  C2.905,27.913,6.355,29,10.062,29c12.072,0,18.675-10.001,18.675-18.675c0-0.284-0.008-0.568-0.02-0.85  C30,8.55,31.112,7.395,31.993,6.077z" fill="#F5F5F5"/><g/><g/><g/><g/><g/><g/></svg>
         &nbsp;KEEP TRACK</a>
         </div>
         <div class="userbox">
@@ -147,9 +147,9 @@
         <div class="socials">
             <!-- this is the details flex container -->
             <div class="details">
-                <div id="astndetail" class="detail astndetail">
-                    <p id="astntext" class="text">
-                        Find my artworks on Artstation.
+                <div id="discorddetail" class="detail discorddetail">
+                    <p id="discordtext" class="text">
+                        Discord Community for Environment Art
                     </p>
                 </div>
                 <div id="ytdetail" class="detail ytdetail">
@@ -165,23 +165,35 @@
             </div>
             <!-- the following is the image/logo container -->
             <div class="container">
-                <div class="imgbox artstation" >
+                <div class="imgbox discord" >
                     <!--you change links on all the <a>  -->
-                    <a href="https://www.artstation.com/abhiraaid/" target="_blank">
+                    <a href="https://discord.gg/MUyNybDR6W" target="_blank">
                         <!-- within the <a>, the first child needs to be the main logo, this affects the hover animations we are adding to the outline svg -->
-                        <svg href="https://www.artstation.com" id="logoastn" class="logo astn" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_7-artstation"><g><path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z" style="fill:#0099E5;"/></g></g><g id="Layer_1"/></svg>                    
-                        <svg id="outlineastn" class="outline astn" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_7-artstation"><g><path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z" /*style="fill:none;fill-opacity:1;stroke:#0099E5;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"*//>/></g><g id="Layer_1"/></svg>
+                            <svg id="logodiscord" class="logo discord" viewBox="-10 -28.5 276 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                                <g>
+                                    <path class="paths discord" d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#F5F5F5" fill-rule="nonzero">
+                            
+                            </path>
+                                </g>
+                            </svg>
+                            <svg id="outlinediscord" class="outline discord" viewBox="-10 -28.5 276 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                                <g>
+                                    <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" >
+                            
+                            </path>
+                                </g>
+                            </svg>
                     </a>
                 </div>
                 <div class="imgbox youtube">
                     <a href="https://www.youtube.com/@abhiraaid/videos/" target="_blank">  
-                        <svg id="logoyt" class="logo yt" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_95-youtube"><g><path d="M476.387,144.888c-5.291-19.919-20.878-35.608-40.67-40.933C399.845,94.282,256,94.282,256,94.282    s-143.845,0-179.719,9.674c-19.791,5.325-35.378,21.013-40.668,40.933c-9.612,36.105-9.612,111.438-9.612,111.438    s0,75.334,9.612,111.438c5.29,19.92,20.877,34.955,40.668,40.281C112.155,417.719,256,417.719,256,417.719    s143.845,0,179.717-9.674c19.792-5.326,35.379-20.361,40.67-40.281c9.612-36.104,9.612-111.438,9.612-111.438    S485.999,180.994,476.387,144.888z" style="fill:#FF0000;"/><polygon points="208.954,324.723 208.954,187.93 329.18,256.328   " style="fill:#FFFFFF;"/></g></g><g id="Layer_1"/></svg>
+                        <svg id="logoyt" class="logo yt" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_95-youtube"><g><path d="M476.387,144.888c-5.291-19.919-20.878-35.608-40.67-40.933C399.845,94.282,256,94.282,256,94.282    s-143.845,0-179.719,9.674c-19.791,5.325-35.378,21.013-40.668,40.933c-9.612,36.105-9.612,111.438-9.612,111.438    s0,75.334,9.612,111.438c5.29,19.92,20.877,34.955,40.668,40.281C112.155,417.719,256,417.719,256,417.719    s143.845,0,179.717-9.674c19.792-5.326,35.379-20.361,40.67-40.281c9.612-36.104,9.612-111.438,9.612-111.438    S485.999,180.994,476.387,144.888z" fill="#F5F5F5"/><polygon points="208.954,324.723 208.954,187.93 329.18,256.328" fill="#000"/></g></g><g id="Layer_1"/></svg>
                         <svg id="outlineyt" class="outline yt" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_95-youtube"><g><path d="M476.387,144.888c-5.291-19.919-20.878-35.608-40.67-40.933C399.845,94.282,256,94.282,256,94.282    s-143.845,0-179.719,9.674c-19.791,5.325-35.378,21.013-40.668,40.933c-9.612,36.105-9.612,111.438-9.612,111.438    s0,75.334,9.612,111.438c5.29,19.92,20.877,34.955,40.668,40.281C112.155,417.719,256,417.719,256,417.719    s143.845,0,179.717-9.674c19.792-5.326,35.379-20.361,40.67-40.281c9.612-36.104,9.612-111.438,9.612-111.438    S485.999,180.994,476.387,144.888z" /*style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"*//></g></g><g id="Layer_1"/></svg>
                     </a>
                 </div>
-                <div class="imgbox patreon">
+                <div class="imgbox gumroad">
                     <a href="https://abhiraaid.gumroad.com/" target="_blank">  
-                        <svg id="logogumr" class="logo gumr" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="gumroad"><path fill="#fff" fill-rule="evenodd" d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24ZM10.7505 23.4423C10.7505 30.4565 14.8859 36.0953 21.9162 36.0953C28.9466 36.0953 30.7385 30.4565 31.152 27.5684V35.5452H36.8625V22.8923H23.8461V25.3677H30.0494C29.3601 28.3935 27.7059 31.4192 23.8461 31.4192C19.5728 31.4192 16.8158 27.7058 16.8158 23.1672C16.8158 18.6287 19.5728 14.9153 23.8461 14.9153C27.8438 14.9153 29.498 17.8035 29.6358 19.7289H36.1146C35.9768 16.2906 32.9441 10.2393 23.984 10.2393C15.2996 10.2393 10.7505 16.1532 10.7505 23.4423Z" clip-rule="evenodd"></path></svg>
+                        <svg id="logogumr" class="logo gumr" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="gumroad"><path fill="#F5F5F5" fill-rule="evenodd" d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24ZM10.7505 23.4423C10.7505 30.4565 14.8859 36.0953 21.9162 36.0953C28.9466 36.0953 30.7385 30.4565 31.152 27.5684V35.5452H36.8625V22.8923H23.8461V25.3677H30.0494C29.3601 28.3935 27.7059 31.4192 23.8461 31.4192C19.5728 31.4192 16.8158 27.7058 16.8158 23.1672C16.8158 18.6287 19.5728 14.9153 23.8461 14.9153C27.8438 14.9153 29.498 17.8035 29.6358 19.7289H36.1146C35.9768 16.2906 32.9441 10.2393 23.984 10.2393C15.2996 10.2393 10.7505 16.1532 10.7505 23.4423Z" clip-rule="evenodd"></path></svg>
                         <svg id="outlinegumr" class="outline gumr" fill="none" height="24" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/></svg>
                     </a>
                 </div>

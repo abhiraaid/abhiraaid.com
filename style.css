@@ -306,12 +306,12 @@ p{
   height: 70px;
   stroke: #fff;
   stroke-width: 15px;
-  animation: path-neon-discord 1s ease-in-out forwards alternate;
+  animation: path-neon-discord .3s ease-in-out forwards alternate;
 }
 
 #logodiscord:hover path{
   fill: #5865F2;
-  transition: fill 1s ease;
+  transition: fill .3s ease;
 }
 
 @keyframes path-neon-discord {
@@ -340,12 +340,12 @@ p{
 
 #logoyt:hover path{
   fill: #FF0000;
-  transition: fill 1s ease;
+  transition: fill .3s ease;
 }
 
 #logoyt:hover polygon{
   fill: #FFF;
-  transition: fill 1s ease;
+  transition: fill .3s ease;
 }
 
 #logoyt:hover ~ .outline.yt{
@@ -353,7 +353,7 @@ p{
   height: 70px;
   stroke: #fff;
   stroke-width: 20px;
-  animation: path-neon-yt 1s ease-in-out forwards;
+  animation: path-neon-yt .3s ease-in-out forwards;
 }
 
 @keyframes path-neon-yt {
@@ -386,12 +386,12 @@ p{
     fill: transparent;
     stroke: #fff;
     stroke-width: 1px;
-    animation: path-neon-gumr 1s ease-in-out forwards;
+    animation: path-neon-gumr .3s ease-in-out forwards;
 }
 
 #logogumr:hover path{
   fill: #FF90E8;
-  transition: fill 1s ease;
+  transition: fill .3s ease;
 }
 
 @keyframes path-neon-gumr 

@@ -4,6 +4,15 @@
     box-sizing: border-box ;
 }
 
+@font-face {
+    font-family: 'Mabry Pro';
+    src: local('Mabry Pro Regular'), local('Mabry-Pro-Regular'),
+        url('fonts/marby.woff2') format('woff2'),
+        url('fonts/marby.woff') format('woff'),
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body{
     background-color: black;  
     height: 100vh;
@@ -126,23 +135,23 @@ body{
    }
 
    #name{
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Marby Pro', sans-serif; 
     color: #F5F5F5;
     font-size: 45px;
     justify-self: flex-end;
     line-height: 1.4em;
     text-align: center;
-    font-weight: 700 !important;
+    font-weight: bold !important;
   }
    
    #designation{
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Marby Pro', sans-serif; 
     color: #F5F5F5;
-    font-size: 23px;
+    font-size: 25px;
     justify-self: flex-end;
     line-height: 1.2em;
     text-align: center;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
    }
 .imgbox{
     width: 120px;
@@ -256,7 +265,7 @@ a{
 }
 
 p{
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Marby Pro', sans-serif; 
   color: white;
   font-size: 18px;
   justify-self: flex-end;
@@ -576,9 +585,9 @@ p{
   }
 
   #telegram {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Marby Pro', sans-serif;
     font-size: 12px;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     color: #f2f2f2;
     text-decoration: none;
     opacity: 0;

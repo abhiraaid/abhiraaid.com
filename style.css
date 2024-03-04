@@ -224,6 +224,9 @@ a{
         justify-content:flex-start;
         align-items: center;
     } 
+    #designation{
+    font-size: 22px;
+   }
 }
 
 
